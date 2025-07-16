@@ -8,7 +8,7 @@ package authpb
 
 import (
 	context "context"
-	common "github.com/nyukhat/oF/gen/go/common"
+	common "github.com/nyukhat/gen/go/common"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"

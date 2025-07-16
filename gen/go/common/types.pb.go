@@ -190,7 +190,7 @@ const file_common_types_proto_rawDesc = "" +
 	"\fdisplay_name\x18\x04 \x01(\tR\vdisplayName\"D\n" +
 	"\x0eStatusResponse\x12\x18\n" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12\x18\n" +
-	"\amessage\x18\x02 \x01(\tR\amessageB.Z,github.com/nyukhat/oF/gen/go/common;commonpbb\x06proto3"
+	"\amessage\x18\x02 \x01(\tR\amessageB+Z)github.com/nyukhat/gen/go/common;commonpbb\x06proto3"
 
 var (
 	file_common_types_proto_rawDescOnce sync.Once

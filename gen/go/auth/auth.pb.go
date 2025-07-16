@@ -7,7 +7,7 @@
 package authpb
 
 import (
-	common "github.com/nyukhat/oF/gen/go/common"
+	common "github.com/nyukhat/gen/go/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -233,7 +233,7 @@ const file_auth_auth_proto_rawDesc = "" +
 	"\x05Login\x12\x12.auth.LoginRequest\x1a\x13.auth.LoginResponse\x125\n" +
 	"\x06Logout\x12\x13.auth.LogoutRequest\x1a\x16.common.StatusResponse\x120\n" +
 	"\bRegister\x12\f.common.User\x1a\x16.common.StatusResponse\x12-\n" +
-	"\aGetUser\x12\x14.auth.GetUserRequest\x1a\f.common.UserB*Z(github.com/nyukhat/oF/gen/go/auth;authpbb\x06proto3"
+	"\aGetUser\x12\x14.auth.GetUserRequest\x1a\f.common.UserB'Z%github.com/nyukhat/gen/go/auth;authpbb\x06proto3"
 
 var (
 	file_auth_auth_proto_rawDescOnce sync.Once
