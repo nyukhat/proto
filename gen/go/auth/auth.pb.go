@@ -7,7 +7,7 @@
 package authpb
 
 import (
-	common "github.com/nyukhat/gen/go/common"
+	common "github.com/nyukhat/proto/gen/go/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

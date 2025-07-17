@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package common;
 
-option go_package = "github.com/nyukhat/gen/go/common;commonpb";
+option go_package = "github.com/nyukhat/proto/gen/go/common;commonpb";
 
 message Empty {}
 
