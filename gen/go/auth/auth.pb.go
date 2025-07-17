@@ -170,50 +170,6 @@ func (x *LogoutRequest) GetToken() string {
 	return ""
 }
 
-type GetUserRequest struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
-}
-
-func (x *GetUserRequest) Reset() {
-	*x = GetUserRequest{}
-	mi := &file_auth_auth_proto_msgTypes[3]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *GetUserRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*GetUserRequest) ProtoMessage() {}
-
-func (x *GetUserRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_auth_auth_proto_msgTypes[3]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use GetUserRequest.ProtoReflect.Descriptor instead.
-func (*GetUserRequest) Descriptor() ([]byte, []int) {
-	return file_auth_auth_proto_rawDescGZIP(), []int{3}
-}
-
-func (x *GetUserRequest) GetId() string {
-	if x != nil {
-		return x.Id
-	}
-	return ""
-}
-
 var File_auth_auth_proto protoreflect.FileDescriptor
 
 const file_auth_auth_proto_rawDesc = "" +
@@ -226,14 +182,11 @@ const file_auth_auth_proto_rawDesc = "" +
 	"\x05token\x18\x01 \x01(\tR\x05token\x12 \n" +
 	"\x04user\x18\x02 \x01(\v2\f.common.UserR\x04user\"%\n" +
 	"\rLogoutRequest\x12\x14\n" +
-	"\x05token\x18\x01 \x01(\tR\x05token\" \n" +
-	"\x0eGetUserRequest\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\tR\x02id2\xd7\x01\n" +
+	"\x05token\x18\x01 \x01(\tR\x05token2\xa8\x01\n" +
 	"\vAuthService\x120\n" +
 	"\x05Login\x12\x12.auth.LoginRequest\x1a\x13.auth.LoginResponse\x125\n" +
 	"\x06Logout\x12\x13.auth.LogoutRequest\x1a\x16.common.StatusResponse\x120\n" +
-	"\bRegister\x12\f.common.User\x1a\x16.common.StatusResponse\x12-\n" +
-	"\aGetUser\x12\x14.auth.GetUserRequest\x1a\f.common.UserB'Z%github.com/nyukhat/gen/go/auth;authpbb\x06proto3"
+	"\bRegister\x12\f.common.User\x1a\x16.common.StatusResponseB-Z+github.com/nyukhat/proto/gen/go/auth;authpbb\x06proto3"
 
 var (
 	file_auth_auth_proto_rawDescOnce sync.Once
@@ -247,27 +200,24 @@ func file_auth_auth_proto_rawDescGZIP() []byte {
 	return file_auth_auth_proto_rawDescData
 }
 
-var file_auth_auth_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_auth_auth_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_auth_auth_proto_goTypes = []any{
 	(*LoginRequest)(nil),          // 0: auth.LoginRequest
 	(*LoginResponse)(nil),         // 1: auth.LoginResponse
 	(*LogoutRequest)(nil),         // 2: auth.LogoutRequest
-	(*GetUserRequest)(nil),        // 3: auth.GetUserRequest
-	(*common.User)(nil),           // 4: common.User
-	(*common.StatusResponse)(nil), // 5: common.StatusResponse
+	(*common.User)(nil),           // 3: common.User
+	(*common.StatusResponse)(nil), // 4: common.StatusResponse
 }
 var file_auth_auth_proto_depIdxs = []int32{
-	4, // 0: auth.LoginResponse.user:type_name -> common.User
+	3, // 0: auth.LoginResponse.user:type_name -> common.User
 	0, // 1: auth.AuthService.Login:input_type -> auth.LoginRequest
 	2, // 2: auth.AuthService.Logout:input_type -> auth.LogoutRequest
-	4, // 3: auth.AuthService.Register:input_type -> common.User
-	3, // 4: auth.AuthService.GetUser:input_type -> auth.GetUserRequest
-	1, // 5: auth.AuthService.Login:output_type -> auth.LoginResponse
-	5, // 6: auth.AuthService.Logout:output_type -> common.StatusResponse
-	5, // 7: auth.AuthService.Register:output_type -> common.StatusResponse
-	4, // 8: auth.AuthService.GetUser:output_type -> common.User
-	5, // [5:9] is the sub-list for method output_type
-	1, // [1:5] is the sub-list for method input_type
+	3, // 3: auth.AuthService.Register:input_type -> common.User
+	1, // 4: auth.AuthService.Login:output_type -> auth.LoginResponse
+	4, // 5: auth.AuthService.Logout:output_type -> common.StatusResponse
+	4, // 6: auth.AuthService.Register:output_type -> common.StatusResponse
+	4, // [4:7] is the sub-list for method output_type
+	1, // [1:4] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
 	1, // [1:1] is the sub-list for extension extendee
 	0, // [0:1] is the sub-list for field type_name
@@ -284,7 +234,7 @@ func file_auth_auth_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_auth_auth_proto_rawDesc), len(file_auth_auth_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   4,
+			NumMessages:   3,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

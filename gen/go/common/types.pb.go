@@ -59,10 +59,9 @@ func (*Empty) Descriptor() ([]byte, []int) {
 
 type User struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Email         string                 `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
 	Username      string                 `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
-	Email         string                 `protobuf:"bytes,3,opt,name=email,proto3" json:"email,omitempty"`
-	DisplayName   string                 `protobuf:"bytes,4,opt,name=display_name,json=displayName,proto3" json:"display_name,omitempty"`
+	Password      string                 `protobuf:"bytes,3,opt,name=password,proto3" json:"password,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -97,9 +96,9 @@ func (*User) Descriptor() ([]byte, []int) {
 	return file_common_types_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *User) GetId() string {
+func (x *User) GetEmail() string {
 	if x != nil {
-		return x.Id
+		return x.Email
 	}
 	return ""
 }
@@ -111,16 +110,9 @@ func (x *User) GetUsername() string {
 	return ""
 }
 
-func (x *User) GetEmail() string {
+func (x *User) GetPassword() string {
 	if x != nil {
-		return x.Email
-	}
-	return ""
-}
-
-func (x *User) GetDisplayName() string {
-	if x != nil {
-		return x.DisplayName
+		return x.Password
 	}
 	return ""
 }
@@ -182,12 +174,11 @@ var File_common_types_proto protoreflect.FileDescriptor
 const file_common_types_proto_rawDesc = "" +
 	"\n" +
 	"\x12common/types.proto\x12\x06common\"\a\n" +
-	"\x05Empty\"k\n" +
-	"\x04User\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\tR\x02id\x12\x1a\n" +
-	"\busername\x18\x02 \x01(\tR\busername\x12\x14\n" +
-	"\x05email\x18\x03 \x01(\tR\x05email\x12!\n" +
-	"\fdisplay_name\x18\x04 \x01(\tR\vdisplayName\"D\n" +
+	"\x05Empty\"T\n" +
+	"\x04User\x12\x14\n" +
+	"\x05email\x18\x01 \x01(\tR\x05email\x12\x1a\n" +
+	"\busername\x18\x02 \x01(\tR\busername\x12\x1a\n" +
+	"\bpassword\x18\x03 \x01(\tR\bpassword\"D\n" +
 	"\x0eStatusResponse\x12\x18\n" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12\x18\n" +
 	"\amessage\x18\x02 \x01(\tR\amessageB1Z/github.com/nyukhat/proto/gen/go/common;commonpbb\x06proto3"

@@ -10,7 +10,6 @@ service AuthService {
   rpc Login(LoginRequest) returns (LoginResponse);
   rpc Logout(LogoutRequest) returns (common.StatusResponse);
   rpc Register(common.User) returns (common.StatusResponse);
-  rpc GetUser(GetUserRequest) returns (common.User);
 }
 
 message LoginRequest {
@@ -25,8 +24,4 @@ message LoginResponse {
 
 message LogoutRequest {
   string token = 1;
-}
-
-message GetUserRequest {
-  string id = 1;
 }
